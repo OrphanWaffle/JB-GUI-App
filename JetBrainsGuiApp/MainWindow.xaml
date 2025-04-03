@@ -1,0 +1,32 @@
+﻿<Window x:Class="JetBrainsGuiApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JetBrainsGuiApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="600">
+
+    <StackPanel Margin="10">
+
+        <TextBlock Text="Input:" Margin="0,0,0,5"/>
+
+        <TextBox x:Name="inputTextBox" Height="25" Margin="0,0,0,10"/>
+
+        <Button x:Name="processButton" Content="Enter" Height="30" Width="100" Margin="0,0,0,10" Click="ProcessButton_Click"/>
+
+        <TextBlock Text="Output:" Margin="0,0,0,5"/>
+
+        <RichTextBox x:Name="outputRichTextBox"
+                     Height="300"
+                     IsReadOnly="True"
+                     VerticalScrollBarVisibility="Auto"
+                     FontFamily="Consolas"
+                     BorderThickness="1"
+                     BorderBrush="Gray">
+            
+            <FlowDocument/>
+        </RichTextBox>
+
+    </StackPanel>
+</Window>
